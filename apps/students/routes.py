@@ -1,7 +1,8 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
 
 students = Blueprint('students', __name__)
 
 @students.route('/')
+@students.route('/students')
 def index():
-    return '<h1>Students</h1>'
+    return render_template('students.html')
