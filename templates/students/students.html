@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% include 'header.html' %}
+
+{% block title %} Students {% endblock %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron p-3">
+                <h2> Manage <b> Students </b>
+                    <button type="button" class="btn btn-success float-right" data-toggle="modal"
+                        data-target="#mymodal">
+                        Add New Student
+                    </button>
+                </h2>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
