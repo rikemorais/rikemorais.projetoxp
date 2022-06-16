@@ -13,6 +13,68 @@
                         Add New Student
                     </button>
                 </h2>
+                <table class="table table-hover table-bordered">
+                    <thead class="thead-dark text-center">
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Actions</th>
+                        </tr>
+                        <tr>
+                            <td>Henrique Morais</td>
+                            <td>rikeaju@hotmail.com</td>
+                            <td>+55 79 99112-4671</td>
+                            <td>
+                                <a href="" class="btn btn-primary btn-xs" data-toggle="modal"
+                                    data-target="#modaledit">Edit</a>
+                                <a href="" class="btn btn-danger btn-xs"
+                                    onclick="return confirm('Are you sure to delete?')">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Acácio Ramos</td>
+                            <td>acacioxp@hotmail.com</td>
+                            <td>+55 79 9999-2082</td>
+                            <td>
+                                <a href="" class="btn btn-primary btn-xs" data-toggle="modal"
+                                    data-target="#modaledit">Edit</a>
+                                <a href="" class="btn btn-danger btn-xs"
+                                    onclick="return confirm('Are you sure to delete?')">Delete</a>
+                            </td>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <!-- Start Modal -->
+            <div id="mymodal" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Add Student</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form action="" method="POST">
+                                <div class="form-group">
+                                    <label>Name: </label>
+                                    <input type="text" class="form-control" name="name" required="1">
+                                </div>
+                                <div class="form-group">
+                                    <label>Email: </label>
+                                    <input type="email" class="form-control" name="email" required="1">
+                                </div>
+                                <div class="form-group">
+                                    <label>Phone: </label>
+                                    <input type="number" class="form-control" name="phone" required="1">
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-primary" type="submit">Add Student</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Modal -->
             </div>
         </div>
     </div>
