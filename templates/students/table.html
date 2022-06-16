@@ -7,27 +7,17 @@
             <th>Name</th>
             <th>Email</th>
             <th>Phone</th>
-            <th>Actions</th>
-        </tr>
-        <tr>
-            <td>Henrique Morais</td>
-            <td>rikeaju@hotmail.com</td>
-            <td>+55 79 99112-4671</td>
-            <td>
-                <a href="" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#modaledit">Edit</a>
-                <a href="" class="btn btn-danger btn-xs" onclick="return confirm('Are you sure to delete?')">Delete</a>
-            </td>
-        </tr>
-        <tr>
-            <td>Acácio Ramos</td>
-            <td>acacioxp@hotmail.com</td>
-            <td>+55 79 99999-2082</td>
-            <td>
-                <a href="" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#modaledit">Edit</a>
-                <a href="" class="btn btn-danger btn-xs" onclick="return confirm('Are you sure to delete?')">Delete</a>
-            </td>
         </tr>
     </thead>
+    <tbody>
+        {% for student in students %}
+        <tr>
+            <td>{{ student.name }}</td>
+            <td>{{ student.email }}</td>
+            <td>{{ student.phone }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
 </table>
 <!-- End Table -->
 {% endblock %}
