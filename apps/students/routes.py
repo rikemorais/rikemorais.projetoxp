@@ -1,7 +1,6 @@
 from flask import Blueprint, render_template
 
 
-
 students = Blueprint('students', __name__)
 
 @students.route('/students')
