@@ -15,7 +15,10 @@
 <!-- Content -->
 
 <body>
-    {% block body %} {% endblock %}
+    {% block body %}
+    {% for student in students %}
+    {% endfor %}
+    {% endblock %}
 </body>
 <!-- Start Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
