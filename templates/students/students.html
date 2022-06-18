@@ -52,7 +52,7 @@
                             <h4 class="modal-title">Update Student</h4>
                         </div>
                         <div class="modal-body">
-                            <form action="" method="POST">
+                            <form action="{{url_for('update')}}" method="POST">
                                 <div class="form-group">
                                     <label>Name: </label>
                                     <input type="hidden" name="id" value="{{student.id}}">

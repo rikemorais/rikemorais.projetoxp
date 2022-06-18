@@ -24,7 +24,20 @@ def create():
         return redirect(url_for('index'))
 
 
+# Update Student
+@app.route('/update', methods=['GET', 'POST', ])
+def update():
+    if request.method == 'POST':
+        data = Students.query.get(request.form.get('id'))
+        data.name = request.form['name']
+        data.email = request.form['email']
+        data.phone = request.form['phone']
+        db.session.commit()
+        return redirect(url_for('index'))
+
 # Delete Student
+
+
 @app.route('/delete/<id>/', methods=['GET', 'POST', ])
 def delete(id):
     student = Students.query.get(id)
