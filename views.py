@@ -8,11 +8,11 @@ from models import Students
 @app.route('/')
 def index():
     students = Students.query.all()
-    return render_template('students/students.html', students = students)
+    return render_template('students/students.html', students=students)
 
 
 # Create Student
-@app.route('/create', methods=['POST',])
+@app.route('/create', methods=['POST', ])
 def create():
     if request.method == 'POST':
         name = request.form['name']
@@ -22,4 +22,12 @@ def create():
         db.session.add(data)
         db.session.commit()
         return redirect(url_for('index'))
-    
+
+
+# Delete Student
+@app.route('/delete/<id>/', methods=['GET', 'POST', ])
+def delete(id):
+    student = Students.query.get(id)
+    db.session.delete(student)
+    db.session.commit()
+    return redirect(url_for('index'))
