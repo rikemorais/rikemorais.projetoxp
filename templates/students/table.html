@@ -1,0 +1,35 @@
+{% extends 'partials/base.html' %}
+{% block body %}
+<!-- Start Table -->
+<table class="table table-hover table-bordered">
+    <caption>
+        <!-- Inserir alguma legenda. -->
+    </caption>
+    <thead class="thead-dark text-center">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <tH></tH>
+        </tr>
+    </thead>
+    <tbody>
+        {% for student in students %}
+        <tr>
+            <td>{{ student.id }}</td>
+            <td>{{ student.name }}</td>
+            <td>{{ student.email }}</td>
+            <td>{{ student.phone }}</td>
+            <td class="text-center">
+                <a href="/update/{{student.id}}" class="btn btn-primary btn-xs" data-toggle="modal"
+                    data-target="#modaledit{{student.id}}">Edit</a>
+                <a href="/delete/{{student.id}}" class="btn btn-danger btn-xs"
+                    onclick="return confirm('Are you sure to delete?')">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<!-- End Table -->
+{% endblock %}
