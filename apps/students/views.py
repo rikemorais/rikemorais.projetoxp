@@ -1,7 +1,7 @@
 from sys import prefix
 from flask import render_template, request, redirect, url_for
 from app import db, app
-from models import Students
+from apps.students.models import Students
 
 
 # Main

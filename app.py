@@ -17,7 +17,7 @@ app = create_app()
 db = SQLAlchemy(app)
 
 
-from views import *
+from apps.students.views import *
 
 
 if __name__ == '__main__':    
